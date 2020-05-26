@@ -18,5 +18,8 @@ router.post('/api/signup', AuthController.signUp);
 
 // Rutas posts
 router.get('/api/posts', auth, PostController.index);
+router.get('/api/posts/:id', auth, PostController.show);
+router.patch('/api/posts/:id', auth, PostController.update);
+router.delete('/api/posts/:id', auth, PostController.delete);
 
 module.exports = router;
