@@ -45,5 +45,13 @@ module.exports = (sequelize, DataTypes) => {
     User.belongsToMany(models.Role, { as: "roles", through: "user_role", foreignKey: "user_id" });
   };
 
+  // Comprueba que el usuario es administrador
+  User.isAdmin = function(roles) {
+    let tmpArray = [];
+    roles.forEach(role => tmpArray.push(role.role));
+
+    return tmpArray.includes('admin');
+  }
+
   return User;
 };
