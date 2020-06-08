@@ -4,7 +4,7 @@ Un ejemplo o boilerplate de autorización basada en JWT y Sequelize ORM de JavaS
 
 ## Instalación
 
-Primero editar el archivo ___.env__ para tu base de datos. Despues: 
+Primero editar el archivo __.env__ para tu base de datos. Despues: 
 
 ```bash
 # Instalar dependencias
