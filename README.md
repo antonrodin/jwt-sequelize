@@ -20,6 +20,6 @@ npx sequelize-cli db:seed:all
 
 ## Mejoras posibles o problemas conocidos
 
-* El seeder de roles da problemas cuando lo migras, habria que separarlo en dos diferentes.
+* ~~El seeder de roles da problemas cuando lo migras, habria que separarlo en dos diferentes~~. Corregido
 * El archivo de routas es un desastre, es posible que sea una gran idea ordenarlo...
 * Dentro de User model se puede añadir un metodo setter de Sequelize para encriptar la contraseña ahi y eliminarlo del auth.js middleware...
