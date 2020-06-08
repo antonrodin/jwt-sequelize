@@ -3,19 +3,12 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
 
-    // Esta migracion o seed d problemillas
     return Promise.all([
 
       queryInterface.bulkInsert('roles', [
         { role: "admin", createdAt: new Date(), updatedAt: new Date() },
         { role: "user", createdAt: new Date(), updatedAt: new Date() }
-      ], {}),
-
-      queryInterface.bulkInsert('user_role', [
-        { user_id: 1, role_id: 1, createdAt: new Date(), updatedAt: new Date() },
-        { user_id: 1, role_id: 2, createdAt: new Date(), updatedAt: new Date() },
-        { user_id: 2, role_id: 2, createdAt: new Date(), updatedAt: new Date() }
-      ], {}),
+      ], {})
 
     ]);
 
@@ -25,7 +18,6 @@ module.exports = {
 
     return Promise.all([
       queryInterface.bulkDelete('roles', null, {}),
-      queryInterface.bulkDelete('user_role', null, {})
     ]);
   }
 };
