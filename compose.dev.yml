@@ -1,0 +1,15 @@
+services:
+  pako:
+    #image: asdasd
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.dev
+    volumes:
+      - ./:/app
+      - /app/node_modules # volumen anonimo para esconder node modules
+    ports:
+      - 3000:3000
+    user: 1000:1000
+    init: true
+    command: npx nodemon app/server.js
+    # command: node app/server.js

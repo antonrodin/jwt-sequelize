@@ -1,0 +1,12 @@
+# Aqui especificar nuestros servicios en formato YAML
+# docker run --init --rm --name jwt -v ./:/app -u 1000:1000 -p 3000:3000 holanode
+services:
+  pako:
+    image: holanode
+    volumes:
+      - ./:/app
+      - /app/node_modules # volumen anonimo para esconder node modules
+    ports:
+      - 3000:3000
+    user: 1000:1000
+    init: true
