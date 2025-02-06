@@ -41,6 +41,8 @@ docker compose up -d
 docker compose stop
 # Eliminar el contenedor
 docker compose down
+# Si tenemos un nombre no estandar de compose.yml
+docker compose -f fichero.yml up -d
 
 # Ejecutar el comando dentro del contenedor y destruirlo despues
 docker compose run --rm pako npm --version
