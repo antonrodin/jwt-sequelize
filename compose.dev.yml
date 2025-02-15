@@ -1,6 +1,6 @@
 services:
   pako:
-    #image: asdasd
+    image: pakonode:0.0.1
     build:
       context: .
       dockerfile: ./docker/Dockerfile.dev

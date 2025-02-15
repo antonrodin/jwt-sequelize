@@ -2,6 +2,9 @@
 # docker run --init --rm --name jwt -v ./:/app -u 1000:1000 -p 3000:3000 holanode 
 FROM node:18
 
+RUN apt-get update
+RUN apt-get -y install vim
+
 # Especificamos nuestro directorio de trabajo
 WORKDIR /app
 
