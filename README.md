@@ -56,6 +56,19 @@ docker compose up --build
 docker compose exec pako bash
 ````
 
+## Mysql & Adminer
+
+Aqui encontraras el archivo compose.yaml para poder arrancar el 
+servicio:
+
+https://gist.github.com/antonrodin/70630d08875e2c6c61798159e2855099
+
+Recuerda que hay que crear la red externa con este comando:
+
+```
+docker network create mi-red
+```
+
 ## Mejoras posibles o problemas conocidos
 
 * ~~El seeder de roles da problemas cuando lo migras, habria que separarlo en dos diferentes~~. Corregido

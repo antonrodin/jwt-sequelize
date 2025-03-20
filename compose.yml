@@ -10,22 +10,9 @@ services:
       - 3000:3000
     user: 1000:1000
     init: true
-    depends_on:
-      - midb
+    networks:
+      - mi-red
 
-  midb:
-    image: mysql
-    ports:
-      - 3308:3306
-    volumes:
-      - misdatos:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
-
-  adminer:
-    image: adminer
-    ports:
-      - 8083:8080
-
-volumes:
-  misdatos:
+networks:
+  mi-red:
+    external: true
